@@ -23,7 +23,7 @@ Check my online courses at [desenvolvedor.io](https://desenvolvedor.io)
 - ***Please check if you have installed the same runtime version (SDK) described in global.json***
 - The latest SDK and tools can be downloaded from https://dot.net/core.
 
-Also you can run the Equinox Project in Visual Studio Code (Windows, Linux or MacOS).
+also you can run the Equinox Project in Visual Studio Code (Windows, Linux or MacOS).
 
 To know more about how to setup your enviroment visit the [Microsoft .NET Download Guide](https://www.microsoft.com/net/download)
 
@@ -54,7 +54,7 @@ To know more about how to setup your enviroment visit the [Microsoft .NET Downlo
 - Unit of Work
 - Repository
 
-## News
+## News..
 
 **v1.8 - 03/22/2022**
 - Migrated for .NET 6.0
