@@ -7,7 +7,7 @@ COPY *.sln .
 COPY src/Equinox.Application/*.csproj ./EquinoxProject/
 
 # copy everything else and build app
-COPY EquinoxProject-.net-App/. ./EquinoxProject/
+COPY . .
 WORKDIR /source/aspnetapp
 RUN dotnet publish -c release -o /app --no-restore
 
