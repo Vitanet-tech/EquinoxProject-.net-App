@@ -5,7 +5,7 @@ WORKDIR /source
 # copy csproj and restore as distinct layers
 COPY *.sln .
 COPY src/Equinox.Application/*.csproj ./EquinoxProject/
-RUN dotnet restore
+RUN dotnet restore  "src/Equinox.Application/Equinox.Application.csproj"
 
 # copy everything else and build app
 COPY EquinoxProject-.net-App/. ./EquinoxProject/
