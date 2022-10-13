@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build-env
 WORKDIR /src
-COPY src/Equinox.Application/Equinox.Application.csproj ./
+COPY /src/Equinox.Application/Equinox.Application.csproj ./
 RUN dotnet restore
 COPY . ./
 RUN dotnet publish -c Release -o out
