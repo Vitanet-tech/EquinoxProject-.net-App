@@ -4,15 +4,15 @@ WORKDIR /source
 
 # copy csproj and restore as distinct layers
 COPY *.sln .
-COPY src/Equinox.Application/*.csproj ./EquinoxProject/
+COPY src/Equinox.Application/*.csproj ./
+RUN dotnet restore
 
 # copy everything else and build app
 COPY . .
-WORKDIR /source/EquinoxProject
-RUN dotnet publish -c release -o /app --no-restore
+RUN dotnet publish -c release -o out
 
 # final stage/image
 FROM mcr.microsoft.com/dotnet/aspnet:6.0
-WORKDIR /app
-COPY --from=build /app ./
+WORKDIR /source
+COPY --from=build /source ./
 ENTRYPOINT ["dotnet", "EquinoxProject.dll"]
