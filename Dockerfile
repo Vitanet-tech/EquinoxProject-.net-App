@@ -3,7 +3,7 @@ WORKDIR /app
 COPY src/Equinox.Application/Equinox.Application.csproj ./
 RUN dotnet restore
 COPY . ./
-RUN dotnet publish -c Release -o out
+RUN dotnet build "Equinox.Application.csproj" -c Release -o /app
 FROM mcr.microsoft.com/dotnet/aspnet:3.1
 WORKDIR /app
 COPY --from=build-env /app/out .
