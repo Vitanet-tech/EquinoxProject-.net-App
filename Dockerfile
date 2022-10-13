@@ -8,7 +8,7 @@ COPY src/Equinox.Application/*.csproj ./EquinoxProject/
 
 # copy everything else and build app
 COPY . .
-WORKDIR /source/aspnetapp
+WORKDIR /source/EquinoxProject
 RUN dotnet publish -c release -o /app --no-restore
 
 # final stage/image
