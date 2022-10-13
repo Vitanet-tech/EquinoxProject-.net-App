@@ -9,7 +9,6 @@ RUN dotnet restore "Equinox.Application.csproj"
 
 # copy everything else and build app
 COPY . .
-RUN dotnet "Equinox.Application.csproj" publish -c Release -o
 
 # final stage/image
 FROM mcr.microsoft.com/dotnet/aspnet:6.0
