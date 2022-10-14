@@ -14,4 +14,6 @@ COPY . .
 FROM mcr.microsoft.com/dotnet/aspnet:6.0
 WORKDIR /source
 COPY --from=build /source ./
+EXPOSE 80
+EXPOSE 443
 ENTRYPOINT ["dotnet", "EquinoxProject.dll"]
